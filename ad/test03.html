@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 리팩토링링(2)</title>
+   <link>
+    <script src="test01.js"></script><!-- 외부 js -->
+
+    <h1>출석부 <div id="clock"></div></h1> 
+
+    <!--문서내 js -->
+<script>
+document.writeln("tadle");
+document.writeln("<colgroup><col style+'width:100px'><col style='''></colgroup");
+document.writeln("tr><td>no</td<td>이름</td></tr>");
+
+let tableRows = "";
+
+
+
+    <table>
+        <colgroup>
+            <col style="width: 100px;">
+            <col style="">
+        </colgroup>
+
+
+        <tr>
+            <td> NO</td>
+            <td>이름</td>
+        </tr>
+        <script>
+            let myame = prompt();
+
+            for (let hakbun = 1; hakbun <= 14; hakbun++) {
+                document.write(`"<tr><td>" + hakbun + "</td><td id='mynamepo" + hakbun + "'></td></tr>"`);
+
+            }
+            document.getElementById("mynamepo1").innerHTML = myame
+        </script>
+    </table>
+
+    <script>
+        let bunho01 = 1;//값을 숫자로 활당 변수의 자료형 - 숫자
+        console.log("bunho01 ==========");
+        console.log(typeof bunho01);
+
+
+        let bunho02 = "1";//값을 숫자로 활당 변수의 자료형 - 문자
+        console.log("bunho02 ==========");
+        console.log(typeof bunho02);
+    </script>
+    <script>
+
+        
+
+
+        setInterval(showTime, 1000);
+
+    </script>
+    </body>
+
+</html>
