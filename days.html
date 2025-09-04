@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>독서 챌린지</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .container{
+      width:300px;
+      height:300px;
+      border-radius:50%;
+      border:1px solid #222;
+      background-color:#3bf;
+      text-align: center;
+    }
+    h1 {
+      margin-top:70px;
+    }
+    .accent {
+      font-size:1.8em;
+      font-weight:bold;
+      color:red;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>책 읽기</h1>
+    <p><span class="accent" id="result"></span>일 연속으로 <br> 책 읽기를 달성했군요.</p>
+    <p>축하합니다!</p>
+  </div>  
+
+<button onciick="window.close()">닫기</button>
+
+
+  <script>
+    // 객체 연습하기
+let now = new Date(); // 현재 날짜와 시간을 가져옵니다.
+let firstDay = new Date("2025-01-01"); // 기준 날짜(2025년 1월 1일)를 생성합니다
+
+let toNow = now.getTime(); // 현재 시간(ms)으로 변환합니다. 밀리초
+let toFirst = firstDay.getTime(); // 기준 날짜를 시간(ms)으로 변환합니다.
+let passedTime = toNow - toFirst; // 두 날짜 사이의 경과 시간(ms)을 계산합니다.
+
+passedTime = Math.round(passedTime/(1000*60*60*24)); // 경과 시간을 일(day) 단위로 변환하고 반올림합니다.
+
+document.querySelector('#result'). innerText = passedTime; // 결과를 HTML 요소에 출력합니다.
+  </script>
+</body>
+</html>
